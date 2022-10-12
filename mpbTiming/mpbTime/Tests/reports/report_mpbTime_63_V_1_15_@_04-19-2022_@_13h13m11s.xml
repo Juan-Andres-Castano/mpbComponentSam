@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<testsuites tests="18" failures="0" skipped="0" time="3.013782">
+  <testsuite name="test_mpbTimeBase" tests="18" failures="0" skipped="0" time="3.013782">
+    <testcase name="test_eMpbTime_1_1_TimeBaseInit_InvalidParam_Fail" />
+    <testcase name="test_eMpbTime_1_2_TimeBaseInit_Success" />
+    <testcase name="test_eMpbTime_1_3_TimeBaseTick_InvalidParam_Fail" />
+    <testcase name="test_eMpbTime_1_4_TimeBaseTick_2TickPerMs_Success" />
+    <testcase name="test_eMpbTime_1_5_TimeBase_1TickPerMs_Success" />
+    <testcase name="test_eMpbTime_1_6_TimeBaseTick_1Second_Success" />
+    <testcase name="test_ulMpbTime_1_7_BaseGetTick_Success" />
+    <testcase name="test_ulMpbTime_1_8_BaseGetMs_Success" />
+    <testcase name="test_ulMpbTime_1_9_BaseGetSecond_Success" />
+    <testcase name="test_ulMpbTime_1_10_BaseGetMinute_0minute_Success" />
+    <testcase name="test_ulMpbTime_1_11_BaseGetMinute_1minute_Success" />
+    <testcase name="test_ulMpbTime_1_12_BaseGetMinute_2minutes_Success" />
+    <testcase name="test_ulMpbTime_1_13_BaseGetHour_0Hour_Success" />
+    <testcase name="test_ulMpbTime_1_14_BaseGetHour_1Hour_Success" />
+    <testcase name="test_ulMpbTime_1_15_BaseGetHour_MoreThen1Hour_Success" />
+    <testcase name="test_eMpbTime_1_16_BaseIsDelayDone_eTrue_Success" />
+    <testcase name="test_eMpbTime_1_17_IsDelayDone_eFalse_Success" />
+    <testcase name="test_eMpbTime_1_18_IsDelayDone_eFalse_OverFlow_Success" />
+  </testsuite>
+</testsuites>
