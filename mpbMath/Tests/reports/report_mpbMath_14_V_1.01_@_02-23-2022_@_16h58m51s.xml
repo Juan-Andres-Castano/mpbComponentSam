@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<testsuites tests="17" failures="0" skipped="0" time="1.475009">
+  <testsuite name="test_mpbMathCrc" tests="9" failures="0" skipped="0" time="1.449986">
+    <testcase name="test_eMpbMathCrcInit_CheckUpFailed_Failed" />
+    <testcase name="test_eMpbMathCrcInit_Success" />
+    <testcase name="test_eMpbMathCrcCalculate_WrongParameters_Failed" />
+    <testcase name="test_eMpbMathCrcCalculate_MallocFailed_Failed" />
+    <testcase name="test_eMpbMathCrcCalculate_CRC16_NoReflection_Success" />
+    <testcase name="test_eMpbMathCrcValidate_WrongParameters_Failed" />
+    <testcase name="test_eMpbMathCrcValidate_MallocFailed_Failed" />
+    <testcase name="test_eMpbMathCrcValidate_CRC32_NoReflexion_Success" />
+    <testcase name="test_eMpbMathCrcValidate_CRC32_NoReflexion_Failed" />
+  </testsuite>
+  <testsuite name="test_mpbMathCrcUtil" tests="8" failures="0" skipped="0" time="0.025023">
+    <testcase name="test_vMpbMathCrcReflectData_Success" />
+    <testcase name="test_vMpbMathCrcReflectBytes_Success" />
+    <testcase name="test_vMpbMathCrcUtilPreCalculate_CRC16_CheckValue_Success" />
+    <testcase name="test_vMpbMathCrcUtilPreCalculate_CRC16_Success" />
+    <testcase name="test_vMpbMathCrcUtilPreCalculate_CRC16_2_Success" />
+    <testcase name="test_vMpbMathCrcUtilPreCalculate_CRC16_3_Success" />
+    <testcase name="test_vMpbMathCrcUtilPreCalculate_CRC16_4_Success" />
+    <testcase name="test_vMpbMathCrcUtilPreCalculate_CRC8_Success" />
+  </testsuite>
+</testsuites>
