@@ -1,0 +1,182 @@
+\hypertarget{_includes_2mpb_digital_filtering_rclp_8h}{}\doxysection{C\+:/mpb\+Component/mpb\+Digital\+Filtering/\+Includes/mpb\+Digital\+Filtering\+Rclp.h File Reference}
+\label{_includes_2mpb_digital_filtering_rclp_8h}\index{C:/mpbComponent/mpbDigitalFiltering/Includes/mpbDigitalFilteringRclp.h@{C:/mpbComponent/mpbDigitalFiltering/Includes/mpbDigitalFilteringRclp.h}}
+
+
+Resistor Capacitor Low Pass Filter.  
+
+
+{\ttfamily \#include \char`\"{}mpblibs.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structx_mpb_digital_filtering_rclp_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Filter\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em RCLP structure for floats. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structx_mpb_digital_filtering_rclp_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Filter\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em RCLP structure for integers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_includes_2mpb_digital_filtering_rclp_8h_a6fdfaca3e1938c1bdb042bffa82d75a3}{e\+Mpb\+Digital\+Filtering\+Rclp\+Init}} (\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Filter\+\_\+t}} $\ast$px\+Rclp, uint32\+\_\+t ul\+Filter\+Constant, uint32\+\_\+t ul\+Update\+Period)
+\begin{DoxyCompactList}\small\item\em Initialize the RCLP filter struct. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_includes_2mpb_digital_filtering_rclp_8h_a4d8373edb7464d2d5ff6034ab9529565}{e\+Mpb\+Digital\+Filtering\+Rclp\+Add}} (\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Filter\+\_\+t}} $\ast$px\+Rclp, int32\+\_\+t sl\+New\+Sample, int32\+\_\+t $\ast$psl\+Filter\+Output)
+\begin{DoxyCompactList}\small\item\em Input value in the RCLP filter. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_includes_2mpb_digital_filtering_rclp_8h_a8300274fff9075064fa98cc4f98a5044}{e\+Mpb\+Digital\+Filtering\+Rclp\+Ready}} (\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Filter\+\_\+t}} $\ast$px\+Rclp, e\+Bool\+\_\+t $\ast$pe\+Is\+Ready)
+\begin{DoxyCompactList}\small\item\em Check if the RCLP filter is ready or not. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_includes_2mpb_digital_filtering_rclp_8h_a36ab0abad3bf35eca0bb7a41e514a77c}{e\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Init}} (\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Filter\+\_\+t}} $\ast$px\+Float\+Rclp, uint32\+\_\+t ul\+Filter\+Constant, uint32\+\_\+t ul\+Update\+Period)
+\begin{DoxyCompactList}\small\item\em Initialize the RCLP float filter struct. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_includes_2mpb_digital_filtering_rclp_8h_a9c7585906004838c85bb53d3216cbd37}{e\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Add}} (\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Filter\+\_\+t}} $\ast$px\+Float\+Rclp, float x\+New\+Sample, float $\ast$px\+Filter\+Output)
+\begin{DoxyCompactList}\small\item\em Input value in the RCLP float filter. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_includes_2mpb_digital_filtering_rclp_8h_ab94e8caf088226228c460645c4a69b74}{e\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Ready}} (\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Filter\+\_\+t}} $\ast$px\+Float\+Rclp, e\+Bool\+\_\+t $\ast$pe\+Is\+Ready)
+\begin{DoxyCompactList}\small\item\em Check if the RCLP float filter is ready or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Resistor Capacitor Low Pass Filter. 
+
+\begin{DoxyAuthor}{Author}
+juan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 2021-\/3-\/5 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+MPB, Montreal, Qc \doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT 2021 MPB, Montreal, Quebec, Canada\end{center} }
+\end{DoxyCopyright}
+\doxysubsubsection*{\begin{center}\copyright{} All rights reserved.\end{center} }
+
+~\newline
+~\newline
+ \begin{center}This document contains confidential and proprietary information of MPB (subject to a non-\/disclosure agreement) and shall\end{center}  \begin{center}not be disclosed, distributed, or reproduced in whole or in part, without the prior written authorization of MPB.\end{center}  
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_includes_2mpb_digital_filtering_rclp_8h_a4d8373edb7464d2d5ff6034ab9529565}\label{_includes_2mpb_digital_filtering_rclp_8h_a4d8373edb7464d2d5ff6034ab9529565}} 
+\index{mpbDigitalFilteringRclp.h@{mpbDigitalFilteringRclp.h}!eMpbDigitalFilteringRclpAdd@{eMpbDigitalFilteringRclpAdd}}
+\index{eMpbDigitalFilteringRclpAdd@{eMpbDigitalFilteringRclpAdd}!mpbDigitalFilteringRclp.h@{mpbDigitalFilteringRclp.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringRclpAdd()}{eMpbDigitalFilteringRclpAdd()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Rclp\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Filter\+\_\+t}} $\ast$}]{px\+Rclp,  }\item[{int32\+\_\+t}]{sl\+New\+Sample,  }\item[{int32\+\_\+t $\ast$}]{psl\+Filter\+Output }\end{DoxyParamCaption})}
+
+
+
+Input value in the RCLP filter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em px\+Rclp} & Pointer of the RCLP filter struct \\
+\hline
+\mbox{\texttt{ in}}  & {\em sl\+New\+Sample} & Value to add to the filter \\
+\hline
+\mbox{\texttt{ out}}  & {\em psl\+Filter\+Output} & Pointer to store the filter output value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or librairie error message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_includes_2mpb_digital_filtering_rclp_8h_a9c7585906004838c85bb53d3216cbd37}\label{_includes_2mpb_digital_filtering_rclp_8h_a9c7585906004838c85bb53d3216cbd37}} 
+\index{mpbDigitalFilteringRclp.h@{mpbDigitalFilteringRclp.h}!eMpbDigitalFilteringRclpFloatAdd@{eMpbDigitalFilteringRclpFloatAdd}}
+\index{eMpbDigitalFilteringRclpFloatAdd@{eMpbDigitalFilteringRclpFloatAdd}!mpbDigitalFilteringRclp.h@{mpbDigitalFilteringRclp.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringRclpFloatAdd()}{eMpbDigitalFilteringRclpFloatAdd()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Filter\+\_\+t}} $\ast$}]{px\+Float\+Rclp,  }\item[{float}]{x\+New\+Sample,  }\item[{float $\ast$}]{px\+Filter\+Output }\end{DoxyParamCaption})}
+
+
+
+Input value in the RCLP float filter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em px\+Float\+Rclp} & Pointer of the RCLP float filter struct \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+New\+Sample} & Value to add to the filter \\
+\hline
+\mbox{\texttt{ out}}  & {\em px\+Filter\+Output} & Pointer to store the filter output value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or librairie error message ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_includes_2mpb_digital_filtering_rclp_8h_a36ab0abad3bf35eca0bb7a41e514a77c}\label{_includes_2mpb_digital_filtering_rclp_8h_a36ab0abad3bf35eca0bb7a41e514a77c}} 
+\index{mpbDigitalFilteringRclp.h@{mpbDigitalFilteringRclp.h}!eMpbDigitalFilteringRclpFloatInit@{eMpbDigitalFilteringRclpFloatInit}}
+\index{eMpbDigitalFilteringRclpFloatInit@{eMpbDigitalFilteringRclpFloatInit}!mpbDigitalFilteringRclp.h@{mpbDigitalFilteringRclp.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringRclpFloatInit()}{eMpbDigitalFilteringRclpFloatInit()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Filter\+\_\+t}} $\ast$}]{px\+Float\+Rclp,  }\item[{uint32\+\_\+t}]{ul\+Filter\+Constant,  }\item[{uint32\+\_\+t}]{ul\+Update\+Period }\end{DoxyParamCaption})}
+
+
+
+Initialize the RCLP float filter struct. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em px\+Float\+Rclp} & Pointer of the RCLP float filter struct \\
+\hline
+\mbox{\texttt{ in}}  & {\em ul\+Filter\+Constant} & Desired time constant of the float filter \\
+\hline
+\mbox{\texttt{ in}}  & {\em ul\+Update\+Period} & Update period of the float filter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or librairie error message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_includes_2mpb_digital_filtering_rclp_8h_ab94e8caf088226228c460645c4a69b74}\label{_includes_2mpb_digital_filtering_rclp_8h_ab94e8caf088226228c460645c4a69b74}} 
+\index{mpbDigitalFilteringRclp.h@{mpbDigitalFilteringRclp.h}!eMpbDigitalFilteringRclpFloatReady@{eMpbDigitalFilteringRclpFloatReady}}
+\index{eMpbDigitalFilteringRclpFloatReady@{eMpbDigitalFilteringRclpFloatReady}!mpbDigitalFilteringRclp.h@{mpbDigitalFilteringRclp.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringRclpFloatReady()}{eMpbDigitalFilteringRclpFloatReady()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Filter\+\_\+t}} $\ast$}]{px\+Float\+Rclp,  }\item[{e\+Bool\+\_\+t $\ast$}]{pe\+Is\+Ready }\end{DoxyParamCaption})}
+
+
+
+Check if the RCLP float filter is ready or not. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em px\+Float\+Rclp} & Pointer of the RCLP filter struct \\
+\hline
+\mbox{\texttt{ out}}  & {\em pe\+Is\+Ready} & e\+False if not fully loaded, e\+True if fully loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or librairie error message ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_includes_2mpb_digital_filtering_rclp_8h_a6fdfaca3e1938c1bdb042bffa82d75a3}\label{_includes_2mpb_digital_filtering_rclp_8h_a6fdfaca3e1938c1bdb042bffa82d75a3}} 
+\index{mpbDigitalFilteringRclp.h@{mpbDigitalFilteringRclp.h}!eMpbDigitalFilteringRclpInit@{eMpbDigitalFilteringRclpInit}}
+\index{eMpbDigitalFilteringRclpInit@{eMpbDigitalFilteringRclpInit}!mpbDigitalFilteringRclp.h@{mpbDigitalFilteringRclp.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringRclpInit()}{eMpbDigitalFilteringRclpInit()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Rclp\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Filter\+\_\+t}} $\ast$}]{px\+Rclp,  }\item[{uint32\+\_\+t}]{ul\+Filter\+Constant,  }\item[{uint32\+\_\+t}]{ul\+Update\+Period }\end{DoxyParamCaption})}
+
+
+
+Initialize the RCLP filter struct. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em px\+Rclp} & Pointer of the RCLP filter struct \\
+\hline
+\mbox{\texttt{ in}}  & {\em ul\+Update\+Period} & \+: Update period of the filter \\
+\hline
+\mbox{\texttt{ in}}  & {\em ul\+Filter\+Constant} & Desired time constant of the filter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or librairie error message ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_includes_2mpb_digital_filtering_rclp_8h_a8300274fff9075064fa98cc4f98a5044}\label{_includes_2mpb_digital_filtering_rclp_8h_a8300274fff9075064fa98cc4f98a5044}} 
+\index{mpbDigitalFilteringRclp.h@{mpbDigitalFilteringRclp.h}!eMpbDigitalFilteringRclpReady@{eMpbDigitalFilteringRclpReady}}
+\index{eMpbDigitalFilteringRclpReady@{eMpbDigitalFilteringRclpReady}!mpbDigitalFilteringRclp.h@{mpbDigitalFilteringRclp.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringRclpReady()}{eMpbDigitalFilteringRclpReady()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Rclp\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Filter\+\_\+t}} $\ast$}]{px\+Rclp,  }\item[{e\+Bool\+\_\+t $\ast$}]{pe\+Is\+Ready }\end{DoxyParamCaption})}
+
+
+
+Check if the RCLP filter is ready or not. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em px\+Rclp} & Pointer of the RCLP filter struct \\
+\hline
+\mbox{\texttt{ out}}  & {\em pe\+Is\+Ready} & e\+False if not fully loaded, e\+True if fully loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or librairie error message 
+\end{DoxyReturn}

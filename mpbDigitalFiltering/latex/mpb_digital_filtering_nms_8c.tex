@@ -1,0 +1,53 @@
+\hypertarget{mpb_digital_filtering_nms_8c}{}\doxysection{Sources/mpb\+Digital\+Filtering\+Nms.c File Reference}
+\label{mpb_digital_filtering_nms_8c}\index{Sources/mpbDigitalFilteringNms.c@{Sources/mpbDigitalFilteringNms.c}}
+
+
+Non monolithic filter.  
+
+
+{\ttfamily \#include \char`\"{}mpb\+Digital\+Filtering\+Nms.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mpb\+Math.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mpb_digital_filtering_nms_8c_a6a8c56a52c32e52e9d611a1adfb79e0f}\label{mpb_digital_filtering_nms_8c_a6a8c56a52c32e52e9d611a1adfb79e0f}} 
+e\+Mpb\+Error\+\_\+t {\bfseries e\+Mpb\+Digital\+Filtering\+Nms\+Init} (x\+Mpb\+Digital\+Filtering\+Nms\+Filter\+\_\+t $\ast$px\+Nms)
+\item 
+\mbox{\Hypertarget{mpb_digital_filtering_nms_8c_a9a5b9168a0671f4bfd0adb1c85b968d3}\label{mpb_digital_filtering_nms_8c_a9a5b9168a0671f4bfd0adb1c85b968d3}} 
+e\+Mpb\+Error\+\_\+t {\bfseries e\+Mpb\+Digital\+Filtering\+Nms\+Add} (x\+Mpb\+Digital\+Filtering\+Nms\+Filter\+\_\+t $\ast$px\+Nms, int32\+\_\+t sl\+New\+Sample, int32\+\_\+t $\ast$psl\+Filter\+Value, int32\+\_\+t $\ast$psl\+Num\+Deriv)
+\item 
+\mbox{\Hypertarget{mpb_digital_filtering_nms_8c_ad5a9adbfba5ca0e5cf95063d6ef59771}\label{mpb_digital_filtering_nms_8c_ad5a9adbfba5ca0e5cf95063d6ef59771}} 
+e\+Mpb\+Error\+\_\+t {\bfseries e\+Mpb\+Digital\+Filtering\+Nms\+Get\+Average} (x\+Mpb\+Digital\+Filtering\+Nms\+Filter\+\_\+t $\ast$px\+Nms, int32\+\_\+t $\ast$psl\+Average)
+\item 
+\mbox{\Hypertarget{mpb_digital_filtering_nms_8c_a8d5bc1261f8f860ec20588d893871e5b}\label{mpb_digital_filtering_nms_8c_a8d5bc1261f8f860ec20588d893871e5b}} 
+e\+Mpb\+Error\+\_\+t {\bfseries e\+Mpb\+Digital\+Filtering\+Nms\+Float\+Init} (x\+Mpb\+Digital\+Filtering\+Nms\+Float\+Filter\+\_\+t $\ast$px\+Float\+Nms, float x\+Epsilon)
+\item 
+\mbox{\Hypertarget{mpb_digital_filtering_nms_8c_a106f48d80c21166841894f9b9cad7914}\label{mpb_digital_filtering_nms_8c_a106f48d80c21166841894f9b9cad7914}} 
+e\+Mpb\+Error\+\_\+t {\bfseries e\+Mpb\+Digital\+Filtering\+Nms\+Float\+Add} (x\+Mpb\+Digital\+Filtering\+Nms\+Float\+Filter\+\_\+t $\ast$px\+Float\+Nms, float x\+New\+Sample, float $\ast$px\+Filter\+Value, float $\ast$px\+Num\+Deriv)
+\item 
+\mbox{\Hypertarget{mpb_digital_filtering_nms_8c_a5fba691ac62d22a1c9763f0554349f12}\label{mpb_digital_filtering_nms_8c_a5fba691ac62d22a1c9763f0554349f12}} 
+e\+Mpb\+Error\+\_\+t {\bfseries e\+Mpb\+Digital\+Filtering\+Nms\+Float\+Get\+Average} (x\+Mpb\+Digital\+Filtering\+Nms\+Float\+Filter\+\_\+t $\ast$px\+Float\+Nms, float $\ast$px\+Average)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Non monolithic filter. 
+
+\begin{DoxyAuthor}{Author}
+juan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 2022-\/02-\/22 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+~\newline
+ 
+\end{DoxyNote}
+\begin{DoxyCopyright}{Copyright}
+MPB, Montreal, Qc \doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT 2021 MPB, Montreal, Quebec, Canada\end{center} }
+\end{DoxyCopyright}
+\doxysubsubsection*{\begin{center}\copyright{} All rights reserved.\end{center} }
+
+~\newline
+~\newline
+ \begin{center}This document contains confidential and proprietary information of MPB (subject to a non-\/disclosure agreement) and shall\end{center}  \begin{center}not be disclosed, distributed, or reproduced in whole or in part, without the prior written authorization of MPB.\end{center}  

@@ -1,0 +1,189 @@
+\hypertarget{mpb_digital_filtering_rclp_8c}{}\doxysection{C\+:/mpb\+Component/mpb\+Digital\+Filtering/\+Sources/mpb\+Digital\+Filtering\+Rclp.c File Reference}
+\label{mpb_digital_filtering_rclp_8c}\index{C:/mpbComponent/mpbDigitalFiltering/Sources/mpbDigitalFilteringRclp.c@{C:/mpbComponent/mpbDigitalFiltering/Sources/mpbDigitalFilteringRclp.c}}
+
+
+Resistor Capacitor Low Pass Filter.  
+
+
+{\ttfamily \#include \char`\"{}mpb\+Digital\+Filtering\+Rclp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mpb\+Math.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{mpb_digital_filtering_rclp_8c_a6fdfaca3e1938c1bdb042bffa82d75a3}{e\+Mpb\+Digital\+Filtering\+Rclp\+Init}} (\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Filter\+\_\+t}} $\ast$px\+Rclp, uint32\+\_\+t ul\+Filter\+Constant, uint32\+\_\+t ul\+Update\+Period)
+\begin{DoxyCompactList}\small\item\em Initialize the RCLP filter struct. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{mpb_digital_filtering_rclp_8c_a4a5f0b51bf6049e4b719259223b9e42c}{e\+Mpb\+Digital\+Filtering\+Rclp\+Add}} (\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Filter\+\_\+t}} $\ast$px\+Rclp, int32\+\_\+t sl\+New\+Value, int32\+\_\+t $\ast$psl\+Filter\+Output)
+\begin{DoxyCompactList}\small\item\em Input value in the RCLP filter. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{mpb_digital_filtering_rclp_8c_a8300274fff9075064fa98cc4f98a5044}{e\+Mpb\+Digital\+Filtering\+Rclp\+Ready}} (\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Filter\+\_\+t}} $\ast$px\+Rclp, e\+Bool\+\_\+t $\ast$pe\+Is\+Ready)
+\begin{DoxyCompactList}\small\item\em Check if the RCLP filter is ready or not. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{mpb_digital_filtering_rclp_8c_a36ab0abad3bf35eca0bb7a41e514a77c}{e\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Init}} (\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Filter\+\_\+t}} $\ast$px\+Float\+Rclp, uint32\+\_\+t ul\+Filter\+Constant, uint32\+\_\+t ul\+Update\+Period)
+\begin{DoxyCompactList}\small\item\em Initialize the RCLP float filter struct. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{mpb_digital_filtering_rclp_8c_a37f954e1199517fdf770b5c2c91857a8}{e\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Add}} (\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Filter\+\_\+t}} $\ast$px\+Float\+Rclp, float x\+New\+Value, float $\ast$px\+Filter\+Output)
+\begin{DoxyCompactList}\small\item\em Input value in the RCLP float filter. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{mpb_digital_filtering_rclp_8c_ab94e8caf088226228c460645c4a69b74}{e\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Ready}} (\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Filter\+\_\+t}} $\ast$px\+Float\+Rclp, e\+Bool\+\_\+t $\ast$pe\+Is\+Ready)
+\begin{DoxyCompactList}\small\item\em Check if the RCLP float filter is ready or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Resistor Capacitor Low Pass Filter. 
+
+\begin{DoxyAuthor}{Author}
+juan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 2019-\/02-\/22 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Functions originally written by Francis Savaria Simple digital filter cleans up noisy data. Cleans up data from pressure and temperature sensors. Richard Rice, Oconomowoc, WI; Edited by Brad Thompson and Fran Granville -- EDN , 3/2/2006 \href{http://www.edn.com/article/CA6309111.html}{\texttt{ http\+://www.\+edn.\+com/article/\+CA6309111.\+html}}
+\end{DoxyNote}
+Many systems use an ADC to sample analog data that temperature and pressure sensors produce. Sometimes, system noise or other factors cause the otherwise slowly fluctuating data to \char`\"{}jump               around\char`\"{}. To reduce higher frequency noise, designers often install an analog RC (resistor-\/capacitor) lowpass filter between the sensor and the analog-\/to-\/digital-\/conversion stage. However, this approach is not always ideal or practical. For example, a long time constant of minutes would require very large values for R and C.
+
+Figure 1 shows an analog RC lowpass filter and its design equations. As an alternative, you can clean up noisy signals that remain within the ADC\textquotesingle{}s linear range by using the digital equivalent of an analog RC lowpass filter. The filter\textquotesingle{}s software comprises only two lines of C code\+: LPOUT=LPACC/K, where the output value of the filter is LPACC divided by a constant, and LPACC=LPACC+\+LPIN?LPOUT, where you add the difference between input and output to update LPACC. You specify all variables as integers.
+
+Each time the analog-\/to-\/digital conversion acquires a new input sample, LPIN, the software produces an output value, LPOUT, which comprises a lowpass-\/filtered version of the input samples. Calculate the value of the constant, K, based on the sampling rate of the system and the desired time constant for the filter as follows\+: K=T?SPS, where K$>$1, and SPS is the system\textquotesingle{}s sampling rate. For example, for a system-\/sampling rate of 200 samples/sec and a desired time constant of 30 sec, the constant K would equal 6000 samples. Applying a step change to the routine\textquotesingle{}s input requires 6000 samples to reach approximately 63\% of its final value at the output.
+
+The lowpass accumulator, LPACC, can grow large for large time constants and large input values. It can grow as large as K times the largest possible LPIN value. Under these conditions, you need to make sure that LPACC does not overflow, and you may need to specify a larger data type to contain LPACC. To avoid a long settling time during start-\/up, before the start of the sampling loop, you can initialize LPACC to a value of K times the current input value.
+
+You can extend the basic filter concept presented to accommodate higher order filters with greater high-\/frequency rejection by executing multiple filter code segments in sequence. Also, you can use an array of variables for LPACC and an array of values of the constant K to filter signals that multiple data channels acquire.
+
+\begin{DoxyCopyright}{Copyright}
+MPB, Montreal, Qc \doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT 2022 NEP, Montreal, Quebec, Canada\end{center} }
+\end{DoxyCopyright}
+\doxysubsubsection*{\begin{center}\copyright{} All rights reserved.\end{center} }
+
+~\newline
+~\newline
+ \begin{center}This document contains confidential and proprietary information of MPB (subject to a non-\/disclosure agreement) and shall\end{center}  \begin{center}not be disclosed, distributed, or reproduced in whole or in part, without the prior written authorization of MPB.\end{center}  
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mpb_digital_filtering_rclp_8c_a4a5f0b51bf6049e4b719259223b9e42c}\label{mpb_digital_filtering_rclp_8c_a4a5f0b51bf6049e4b719259223b9e42c}} 
+\index{mpbDigitalFilteringRclp.c@{mpbDigitalFilteringRclp.c}!eMpbDigitalFilteringRclpAdd@{eMpbDigitalFilteringRclpAdd}}
+\index{eMpbDigitalFilteringRclpAdd@{eMpbDigitalFilteringRclpAdd}!mpbDigitalFilteringRclp.c@{mpbDigitalFilteringRclp.c}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringRclpAdd()}{eMpbDigitalFilteringRclpAdd()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Rclp\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Filter\+\_\+t}} $\ast$}]{px\+Rclp,  }\item[{int32\+\_\+t}]{sl\+New\+Sample,  }\item[{int32\+\_\+t $\ast$}]{psl\+Filter\+Output }\end{DoxyParamCaption})}
+
+
+
+Input value in the RCLP filter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em px\+Rclp} & Pointer of the RCLP filter struct \\
+\hline
+\mbox{\texttt{ in}}  & {\em sl\+New\+Sample} & Value to add to the filter \\
+\hline
+\mbox{\texttt{ out}}  & {\em psl\+Filter\+Output} & Pointer to store the filter output value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or librairie error message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mpb_digital_filtering_rclp_8c_a37f954e1199517fdf770b5c2c91857a8}\label{mpb_digital_filtering_rclp_8c_a37f954e1199517fdf770b5c2c91857a8}} 
+\index{mpbDigitalFilteringRclp.c@{mpbDigitalFilteringRclp.c}!eMpbDigitalFilteringRclpFloatAdd@{eMpbDigitalFilteringRclpFloatAdd}}
+\index{eMpbDigitalFilteringRclpFloatAdd@{eMpbDigitalFilteringRclpFloatAdd}!mpbDigitalFilteringRclp.c@{mpbDigitalFilteringRclp.c}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringRclpFloatAdd()}{eMpbDigitalFilteringRclpFloatAdd()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Filter\+\_\+t}} $\ast$}]{px\+Float\+Rclp,  }\item[{float}]{x\+New\+Sample,  }\item[{float $\ast$}]{px\+Filter\+Output }\end{DoxyParamCaption})}
+
+
+
+Input value in the RCLP float filter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em px\+Float\+Rclp} & Pointer of the RCLP float filter struct \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+New\+Sample} & Value to add to the filter \\
+\hline
+\mbox{\texttt{ out}}  & {\em px\+Filter\+Output} & Pointer to store the filter output value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or librairie error message ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mpb_digital_filtering_rclp_8c_a36ab0abad3bf35eca0bb7a41e514a77c}\label{mpb_digital_filtering_rclp_8c_a36ab0abad3bf35eca0bb7a41e514a77c}} 
+\index{mpbDigitalFilteringRclp.c@{mpbDigitalFilteringRclp.c}!eMpbDigitalFilteringRclpFloatInit@{eMpbDigitalFilteringRclpFloatInit}}
+\index{eMpbDigitalFilteringRclpFloatInit@{eMpbDigitalFilteringRclpFloatInit}!mpbDigitalFilteringRclp.c@{mpbDigitalFilteringRclp.c}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringRclpFloatInit()}{eMpbDigitalFilteringRclpFloatInit()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Filter\+\_\+t}} $\ast$}]{px\+Float\+Rclp,  }\item[{uint32\+\_\+t}]{ul\+Filter\+Constant,  }\item[{uint32\+\_\+t}]{ul\+Update\+Period }\end{DoxyParamCaption})}
+
+
+
+Initialize the RCLP float filter struct. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em px\+Float\+Rclp} & Pointer of the RCLP float filter struct \\
+\hline
+\mbox{\texttt{ in}}  & {\em ul\+Filter\+Constant} & Desired time constant of the float filter \\
+\hline
+\mbox{\texttt{ in}}  & {\em ul\+Update\+Period} & Update period of the float filter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or librairie error message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mpb_digital_filtering_rclp_8c_ab94e8caf088226228c460645c4a69b74}\label{mpb_digital_filtering_rclp_8c_ab94e8caf088226228c460645c4a69b74}} 
+\index{mpbDigitalFilteringRclp.c@{mpbDigitalFilteringRclp.c}!eMpbDigitalFilteringRclpFloatReady@{eMpbDigitalFilteringRclpFloatReady}}
+\index{eMpbDigitalFilteringRclpFloatReady@{eMpbDigitalFilteringRclpFloatReady}!mpbDigitalFilteringRclp.c@{mpbDigitalFilteringRclp.c}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringRclpFloatReady()}{eMpbDigitalFilteringRclpFloatReady()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Float\+Filter\+\_\+t}} $\ast$}]{px\+Float\+Rclp,  }\item[{e\+Bool\+\_\+t $\ast$}]{pe\+Is\+Ready }\end{DoxyParamCaption})}
+
+
+
+Check if the RCLP float filter is ready or not. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em px\+Float\+Rclp} & Pointer of the RCLP filter struct \\
+\hline
+\mbox{\texttt{ out}}  & {\em pe\+Is\+Ready} & e\+False if not fully loaded, e\+True if fully loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or librairie error message ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mpb_digital_filtering_rclp_8c_a6fdfaca3e1938c1bdb042bffa82d75a3}\label{mpb_digital_filtering_rclp_8c_a6fdfaca3e1938c1bdb042bffa82d75a3}} 
+\index{mpbDigitalFilteringRclp.c@{mpbDigitalFilteringRclp.c}!eMpbDigitalFilteringRclpInit@{eMpbDigitalFilteringRclpInit}}
+\index{eMpbDigitalFilteringRclpInit@{eMpbDigitalFilteringRclpInit}!mpbDigitalFilteringRclp.c@{mpbDigitalFilteringRclp.c}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringRclpInit()}{eMpbDigitalFilteringRclpInit()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Rclp\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Filter\+\_\+t}} $\ast$}]{px\+Rclp,  }\item[{uint32\+\_\+t}]{ul\+Filter\+Constant,  }\item[{uint32\+\_\+t}]{ul\+Update\+Period }\end{DoxyParamCaption})}
+
+
+
+Initialize the RCLP filter struct. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em px\+Rclp} & Pointer of the RCLP filter struct \\
+\hline
+\mbox{\texttt{ in}}  & {\em ul\+Update\+Period} & \+: Update period of the filter \\
+\hline
+\mbox{\texttt{ in}}  & {\em ul\+Filter\+Constant} & Desired time constant of the filter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or librairie error message ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mpb_digital_filtering_rclp_8c_a8300274fff9075064fa98cc4f98a5044}\label{mpb_digital_filtering_rclp_8c_a8300274fff9075064fa98cc4f98a5044}} 
+\index{mpbDigitalFilteringRclp.c@{mpbDigitalFilteringRclp.c}!eMpbDigitalFilteringRclpReady@{eMpbDigitalFilteringRclpReady}}
+\index{eMpbDigitalFilteringRclpReady@{eMpbDigitalFilteringRclpReady}!mpbDigitalFilteringRclp.c@{mpbDigitalFilteringRclp.c}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringRclpReady()}{eMpbDigitalFilteringRclpReady()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Rclp\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_rclp_filter__t}{x\+Mpb\+Digital\+Filtering\+Rclp\+Filter\+\_\+t}} $\ast$}]{px\+Rclp,  }\item[{e\+Bool\+\_\+t $\ast$}]{pe\+Is\+Ready }\end{DoxyParamCaption})}
+
+
+
+Check if the RCLP filter is ready or not. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em px\+Rclp} & Pointer of the RCLP filter struct \\
+\hline
+\mbox{\texttt{ out}}  & {\em pe\+Is\+Ready} & e\+False if not fully loaded, e\+True if fully loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or librairie error message 
+\end{DoxyReturn}

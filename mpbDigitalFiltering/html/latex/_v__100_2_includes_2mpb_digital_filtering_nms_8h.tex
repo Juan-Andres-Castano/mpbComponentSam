@@ -1,0 +1,183 @@
+\hypertarget{_v__100_2_includes_2mpb_digital_filtering_nms_8h}{}\doxysection{C\+:/mpb\+Component/mpb\+Digital\+Filtering/\+V\+\_\+100/\+Includes/mpb\+Digital\+Filtering\+Nms.h File Reference}
+\label{_v__100_2_includes_2mpb_digital_filtering_nms_8h}\index{C:/mpbComponent/mpbDigitalFiltering/V\_100/Includes/mpbDigitalFilteringNms.h@{C:/mpbComponent/mpbDigitalFiltering/V\_100/Includes/mpbDigitalFilteringNms.h}}
+
+
+Non monolithic filter.  
+
+
+{\ttfamily \#include \char`\"{}mpblibs.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structx_mpb_digital_filtering_nms_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Filter\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Nms filter structure for signed integer 32 bits. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structx_mpb_digital_filtering_nms_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Float\+Filter\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Nms filter structure for floats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a6a8c56a52c32e52e9d611a1adfb79e0f}{e\+Mpb\+Digital\+Filtering\+Nms\+Init}} (\mbox{\hyperlink{structx_mpb_digital_filtering_nms_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Filter\+\_\+t}} $\ast$px\+Nms)
+\begin{DoxyCompactList}\small\item\em Initialize the non monolithic filter. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a9a5b9168a0671f4bfd0adb1c85b968d3}{e\+Mpb\+Digital\+Filtering\+Nms\+Add}} (\mbox{\hyperlink{structx_mpb_digital_filtering_nms_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Filter\+\_\+t}} $\ast$px\+Nms, int32\+\_\+t sl\+New\+Sample, int32\+\_\+t $\ast$psl\+Filter\+Value, int32\+\_\+t $\ast$psl\+Num\+Deriv)
+\begin{DoxyCompactList}\small\item\em Add a new value in the non monolithic filter. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_v__100_2_includes_2mpb_digital_filtering_nms_8h_ad5a9adbfba5ca0e5cf95063d6ef59771}{e\+Mpb\+Digital\+Filtering\+Nms\+Get\+Average}} (\mbox{\hyperlink{structx_mpb_digital_filtering_nms_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Filter\+\_\+t}} $\ast$px\+Nms, int32\+\_\+t $\ast$psl\+Average)
+\begin{DoxyCompactList}\small\item\em Get the average of the non monolithic filter. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a8d5bc1261f8f860ec20588d893871e5b}{e\+Mpb\+Digital\+Filtering\+Nms\+Float\+Init}} (\mbox{\hyperlink{structx_mpb_digital_filtering_nms_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Float\+Filter\+\_\+t}} $\ast$px\+Float\+Nms, float x\+Epsilon)
+\begin{DoxyCompactList}\small\item\em Initialize the non monolithic filter in float. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a106f48d80c21166841894f9b9cad7914}{e\+Mpb\+Digital\+Filtering\+Nms\+Float\+Add}} (\mbox{\hyperlink{structx_mpb_digital_filtering_nms_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Float\+Filter\+\_\+t}} $\ast$px\+Float\+Nms, float x\+New\+Sample, float $\ast$px\+Filter\+Value, float $\ast$px\+Num\+Deriv)
+\begin{DoxyCompactList}\small\item\em Add a new float value in the non monolithic filter. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a5fba691ac62d22a1c9763f0554349f12}{e\+Mpb\+Digital\+Filtering\+Nms\+Float\+Get\+Average}} (\mbox{\hyperlink{structx_mpb_digital_filtering_nms_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Float\+Filter\+\_\+t}} $\ast$px\+Float\+Nms, float $\ast$px\+Average)
+\begin{DoxyCompactList}\small\item\em Get the average of the non monolithic filter in float. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Non monolithic filter. 
+
+\begin{DoxyAuthor}{Author}
+juan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 2021-\/3-\/5 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+MPB, Montreal, Qc \doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT 2021 MPB, Montreal, Quebec, Canada\end{center} }
+\end{DoxyCopyright}
+\doxysubsubsection*{\begin{center}\copyright{} All rights reserved.\end{center} }
+
+~\newline
+~\newline
+ \begin{center}This document contains confidential and proprietary information of MPB (subject to a non-\/disclosure agreement) and shall\end{center}  \begin{center}not be disclosed, distributed, or reproduced in whole or in part, without the prior written authorization of MPB.\end{center}  
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a9a5b9168a0671f4bfd0adb1c85b968d3}\label{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a9a5b9168a0671f4bfd0adb1c85b968d3}} 
+\index{mpbDigitalFilteringNms.h@{mpbDigitalFilteringNms.h}!eMpbDigitalFilteringNmsAdd@{eMpbDigitalFilteringNmsAdd}}
+\index{eMpbDigitalFilteringNmsAdd@{eMpbDigitalFilteringNmsAdd}!mpbDigitalFilteringNms.h@{mpbDigitalFilteringNms.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringNmsAdd()}{eMpbDigitalFilteringNmsAdd()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Nms\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_nms_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Filter\+\_\+t}} $\ast$}]{px\+Nms,  }\item[{int32\+\_\+t}]{sl\+New\+Sample,  }\item[{int32\+\_\+t $\ast$}]{psl\+Filter\+Value,  }\item[{int32\+\_\+t $\ast$}]{psl\+Num\+Deriv }\end{DoxyParamCaption})}
+
+
+
+Add a new value in the non monolithic filter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em px\+Nms} & Pointer of the NMS filter struct \\
+\hline
+\mbox{\texttt{ in}}  & {\em sl\+New\+Sample} & Value to add to the filter \\
+\hline
+\mbox{\texttt{ out}}  & {\em psl\+Filter\+Value} & Pointer to store the filtered value \\
+\hline
+\mbox{\texttt{ out}}  & {\em psl\+Num\+Deriv} & Pointer to store the numerical derivative (optional) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a106f48d80c21166841894f9b9cad7914}\label{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a106f48d80c21166841894f9b9cad7914}} 
+\index{mpbDigitalFilteringNms.h@{mpbDigitalFilteringNms.h}!eMpbDigitalFilteringNmsFloatAdd@{eMpbDigitalFilteringNmsFloatAdd}}
+\index{eMpbDigitalFilteringNmsFloatAdd@{eMpbDigitalFilteringNmsFloatAdd}!mpbDigitalFilteringNms.h@{mpbDigitalFilteringNms.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringNmsFloatAdd()}{eMpbDigitalFilteringNmsFloatAdd()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Nms\+Float\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_nms_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Float\+Filter\+\_\+t}} $\ast$}]{px\+Float\+Nms,  }\item[{float}]{x\+New\+Sample,  }\item[{float $\ast$}]{px\+Filter\+Value,  }\item[{float $\ast$}]{px\+Num\+Deriv }\end{DoxyParamCaption})}
+
+
+
+Add a new float value in the non monolithic filter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em px\+Float\+Nms} & Pointer of the NMS filter struct \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+New\+Sample} & Float value to add to the filter \\
+\hline
+\mbox{\texttt{ out}}  & {\em px\+Filter\+Value} & Pointer to store the filtered value \\
+\hline
+\mbox{\texttt{ out}}  & {\em px\+Num\+Deriv} & Pointer to store the numerical derivative (optional) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a5fba691ac62d22a1c9763f0554349f12}\label{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a5fba691ac62d22a1c9763f0554349f12}} 
+\index{mpbDigitalFilteringNms.h@{mpbDigitalFilteringNms.h}!eMpbDigitalFilteringNmsFloatGetAverage@{eMpbDigitalFilteringNmsFloatGetAverage}}
+\index{eMpbDigitalFilteringNmsFloatGetAverage@{eMpbDigitalFilteringNmsFloatGetAverage}!mpbDigitalFilteringNms.h@{mpbDigitalFilteringNms.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringNmsFloatGetAverage()}{eMpbDigitalFilteringNmsFloatGetAverage()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Nms\+Float\+Get\+Average (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_nms_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Float\+Filter\+\_\+t}} $\ast$}]{px\+Float\+Nms,  }\item[{float $\ast$}]{px\+Average }\end{DoxyParamCaption})}
+
+
+
+Get the average of the non monolithic filter in float. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em px\+Float\+Nms} & Pointer of the NMS filter struct \\
+\hline
+\mbox{\texttt{ out}}  & {\em px\+Average} & Pointer to store the average value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a8d5bc1261f8f860ec20588d893871e5b}\label{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a8d5bc1261f8f860ec20588d893871e5b}} 
+\index{mpbDigitalFilteringNms.h@{mpbDigitalFilteringNms.h}!eMpbDigitalFilteringNmsFloatInit@{eMpbDigitalFilteringNmsFloatInit}}
+\index{eMpbDigitalFilteringNmsFloatInit@{eMpbDigitalFilteringNmsFloatInit}!mpbDigitalFilteringNms.h@{mpbDigitalFilteringNms.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringNmsFloatInit()}{eMpbDigitalFilteringNmsFloatInit()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Nms\+Float\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_nms_float_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Float\+Filter\+\_\+t}} $\ast$}]{px\+Float\+Nms,  }\item[{float}]{x\+Epsilon }\end{DoxyParamCaption})}
+
+
+
+Initialize the non monolithic filter in float. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em px\+Float\+Nms} & Pointer of the NMS filter struct \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+Epsilon} & The variation between two number at which we consider there is a real difference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_v__100_2_includes_2mpb_digital_filtering_nms_8h_ad5a9adbfba5ca0e5cf95063d6ef59771}\label{_v__100_2_includes_2mpb_digital_filtering_nms_8h_ad5a9adbfba5ca0e5cf95063d6ef59771}} 
+\index{mpbDigitalFilteringNms.h@{mpbDigitalFilteringNms.h}!eMpbDigitalFilteringNmsGetAverage@{eMpbDigitalFilteringNmsGetAverage}}
+\index{eMpbDigitalFilteringNmsGetAverage@{eMpbDigitalFilteringNmsGetAverage}!mpbDigitalFilteringNms.h@{mpbDigitalFilteringNms.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringNmsGetAverage()}{eMpbDigitalFilteringNmsGetAverage()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Nms\+Get\+Average (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_nms_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Filter\+\_\+t}} $\ast$}]{px\+Nms,  }\item[{int32\+\_\+t $\ast$}]{psl\+Average }\end{DoxyParamCaption})}
+
+
+
+Get the average of the non monolithic filter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em px\+Nms} & Pointer of the NMS filter struct \\
+\hline
+\mbox{\texttt{ out}}  & {\em psl\+Average} & Pointer to store the average value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a6a8c56a52c32e52e9d611a1adfb79e0f}\label{_v__100_2_includes_2mpb_digital_filtering_nms_8h_a6a8c56a52c32e52e9d611a1adfb79e0f}} 
+\index{mpbDigitalFilteringNms.h@{mpbDigitalFilteringNms.h}!eMpbDigitalFilteringNmsInit@{eMpbDigitalFilteringNmsInit}}
+\index{eMpbDigitalFilteringNmsInit@{eMpbDigitalFilteringNmsInit}!mpbDigitalFilteringNms.h@{mpbDigitalFilteringNms.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringNmsInit()}{eMpbDigitalFilteringNmsInit()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Nms\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_nms_filter__t}{x\+Mpb\+Digital\+Filtering\+Nms\+Filter\+\_\+t}} $\ast$}]{px\+Nms }\end{DoxyParamCaption})}
+
+
+
+Initialize the non monolithic filter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em px\+Nms} & Pointer of the NMS filter structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message ~\newline
+ 
+\end{DoxyReturn}

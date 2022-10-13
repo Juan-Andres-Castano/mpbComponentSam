@@ -1,0 +1,84 @@
+\hypertarget{mpb_digital_filtering_moving_average_8h}{}\doxysection{C\+:/mpb\+Component/mpb\+Digital\+Filtering/\+V\+\_\+100/\+Includes/mpb\+Digital\+Filtering\+Moving\+Average.h File Reference}
+\label{mpb_digital_filtering_moving_average_8h}\index{C:/mpbComponent/mpbDigitalFiltering/V\_100/Includes/mpbDigitalFilteringMovingAverage.h@{C:/mpbComponent/mpbDigitalFiltering/V\_100/Includes/mpbDigitalFilteringMovingAverage.h}}
+
+
+Contains the moving average filter.  
+
+
+{\ttfamily \#include \char`\"{}mpblibs.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structx_mpb_digital_filtering_moving_average_filter__t}{x\+Mpb\+Digital\+Filtering\+Moving\+Average\+Filter\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Moving average structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{mpb_digital_filtering_moving_average_8h_abceae7fda783d490dda8c2cc9fe6a2f2}{e\+Mpb\+Digital\+Filtering\+Moving\+Average\+Init}} (uint8\+\_\+t uc\+Average\+Span, \mbox{\hyperlink{structx_mpb_digital_filtering_moving_average_filter__t}{x\+Mpb\+Digital\+Filtering\+Moving\+Average\+Filter\+\_\+t}} $\ast$px\+Filter\+MA)
+\begin{DoxyCompactList}\small\item\em Initialize the moving average filter. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{mpb_digital_filtering_moving_average_8h_a2d28290c9a86d32bd5fad454aa5cd2d0}{e\+Mpb\+Digital\+Filtering\+Moving\+Average\+Add}} (\mbox{\hyperlink{structx_mpb_digital_filtering_moving_average_filter__t}{x\+Mpb\+Digital\+Filtering\+Moving\+Average\+Filter\+\_\+t}} $\ast$px\+Filter\+MA, float f\+New\+Value, float $\ast$pf\+Filtered\+Value)
+\begin{DoxyCompactList}\small\item\em Computes the filter value using moving average. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the moving average filter. 
+
+\begin{DoxyAuthor}{Author}
+juan andres 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 2021-\/ 03-\/ 5 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+MPB, Montreal, Qc \doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT 2021 MPB, Montreal, Quebec, Canada\end{center} }
+\end{DoxyCopyright}
+\doxysubsubsection*{\begin{center}\copyright{} All rights reserved.\end{center} }
+
+~\newline
+~\newline
+ \begin{center}This document contains confidential and proprietary information of MPB (subject to a non-\/disclosure agreement) and shall\end{center}  \begin{center}not be disclosed, distributed, or reproduced in whole or in part, without the prior written authorization of MPB.\end{center}  
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mpb_digital_filtering_moving_average_8h_a2d28290c9a86d32bd5fad454aa5cd2d0}\label{mpb_digital_filtering_moving_average_8h_a2d28290c9a86d32bd5fad454aa5cd2d0}} 
+\index{mpbDigitalFilteringMovingAverage.h@{mpbDigitalFilteringMovingAverage.h}!eMpbDigitalFilteringMovingAverageAdd@{eMpbDigitalFilteringMovingAverageAdd}}
+\index{eMpbDigitalFilteringMovingAverageAdd@{eMpbDigitalFilteringMovingAverageAdd}!mpbDigitalFilteringMovingAverage.h@{mpbDigitalFilteringMovingAverage.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringMovingAverageAdd()}{eMpbDigitalFilteringMovingAverageAdd()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Moving\+Average\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_moving_average_filter__t}{x\+Mpb\+Digital\+Filtering\+Moving\+Average\+Filter\+\_\+t}} $\ast$}]{px\+Filter\+MA,  }\item[{float}]{f\+New\+Value,  }\item[{float $\ast$}]{pf\+Filtered\+Value }\end{DoxyParamCaption})}
+
+
+
+Computes the filter value using moving average. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em px\+Filter\+MA} & Pointer of the Moving average filter structure. \\
+\hline
+\mbox{\texttt{ in}}  & {\em f\+New\+Value} & new data value. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pf\+Filtered\+Value} & pointer to filtered output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message . 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mpb_digital_filtering_moving_average_8h_abceae7fda783d490dda8c2cc9fe6a2f2}\label{mpb_digital_filtering_moving_average_8h_abceae7fda783d490dda8c2cc9fe6a2f2}} 
+\index{mpbDigitalFilteringMovingAverage.h@{mpbDigitalFilteringMovingAverage.h}!eMpbDigitalFilteringMovingAverageInit@{eMpbDigitalFilteringMovingAverageInit}}
+\index{eMpbDigitalFilteringMovingAverageInit@{eMpbDigitalFilteringMovingAverageInit}!mpbDigitalFilteringMovingAverage.h@{mpbDigitalFilteringMovingAverage.h}}
+\doxysubsubsection{\texorpdfstring{eMpbDigitalFilteringMovingAverageInit()}{eMpbDigitalFilteringMovingAverageInit()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Mpb\+Digital\+Filtering\+Moving\+Average\+Init (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{uc\+Average\+Span,  }\item[{\mbox{\hyperlink{structx_mpb_digital_filtering_moving_average_filter__t}{x\+Mpb\+Digital\+Filtering\+Moving\+Average\+Filter\+\_\+t}} $\ast$}]{px\+Filter\+MA }\end{DoxyParamCaption})}
+
+
+
+Initialize the moving average filter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uc\+Average\+Span} & count of average values. \\
+\hline
+\mbox{\texttt{ out}}  & {\em px\+Filter\+MA} & Pointer of the Moving average filter structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message. ~\newline
+ 
+\end{DoxyReturn}

@@ -1,0 +1,104 @@
+\hypertarget{test__mpb_digital_filtering_rclp_8c}{}\doxysection{C\+:/mpb\+Component/mpb\+Digital\+Filtering/\+Tests/test\+\_\+mpb\+Digital\+Filtering\+Rclp.c File Reference}
+\label{test__mpb_digital_filtering_rclp_8c}\index{C:/mpbComponent/mpbDigitalFiltering/Tests/test\_mpbDigitalFilteringRclp.c@{C:/mpbComponent/mpbDigitalFiltering/Tests/test\_mpbDigitalFilteringRclp.c}}
+
+
+Tests for the mpb\+Digital\+Filtering\+Rclp library.  
+
+
+{\ttfamily \#include \char`\"{}unity.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mpb\+Digital\+Filtering\+Rclp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mock\+\_\+mpb\+Math\+Division.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_a63326a1b70b6e3f070e51687798e02de}\label{test__mpb_digital_filtering_rclp_8c_a63326a1b70b6e3f070e51687798e02de}} 
+void {\bfseries set\+Up} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_ab804e0f66def63262c1d6b4e3d2a2bd7}\label{test__mpb_digital_filtering_rclp_8c_ab804e0f66def63262c1d6b4e3d2a2bd7}} 
+void {\bfseries tear\+Down} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_a3a79cef5c5aadb0919bb481a0293c5d7}\label{test__mpb_digital_filtering_rclp_8c_a3a79cef5c5aadb0919bb481a0293c5d7}} 
+void {\bfseries test\+\_\+e\+Mpbp\+Rclp\+Filter\+Init\+\_\+ul\+KNot\+Zero\+\_\+\+Success} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_abbd9caa45f4857b25be788079dd8706c}\label{test__mpb_digital_filtering_rclp_8c_abbd9caa45f4857b25be788079dd8706c}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Filter\+Init\+\_\+ul\+KZero\+\_\+\+Success} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_ac412fab18ce932a18ae29231489df6e9}\label{test__mpb_digital_filtering_rclp_8c_ac412fab18ce932a18ae29231489df6e9}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Filter\+Init\+\_\+\+Null\+Pointer\+\_\+\+Fail} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_a923f1e1116d3411667c1ade81d514770}\label{test__mpb_digital_filtering_rclp_8c_a923f1e1116d3411667c1ade81d514770}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Filter\+Init\+\_\+e\+Mpb\+Math\+Division\+U32\+\_\+\+Fail} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_a73dab60e0581d78780d254555df13d29}\label{test__mpb_digital_filtering_rclp_8c_a73dab60e0581d78780d254555df13d29}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Filter\+Add\+\_\+\+Positive\+Values\+\_\+\+Success} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_ae7c1f416fa9d97b0a1d7a58c30ae549f}\label{test__mpb_digital_filtering_rclp_8c_ae7c1f416fa9d97b0a1d7a58c30ae549f}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Filter\+Add\+\_\+\+Negative\+Values\+\_\+\+Success} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_a98975f3f15f2b8fd35b3dd76effbfa1d}\label{test__mpb_digital_filtering_rclp_8c_a98975f3f15f2b8fd35b3dd76effbfa1d}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Filter\+Add\+\_\+e\+Mpb\+Math\+Division\+S64\+\_\+\+Fail} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_acc75f91441f5f9c51d61ceeba25b414e}\label{test__mpb_digital_filtering_rclp_8c_acc75f91441f5f9c51d61ceeba25b414e}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Filter\+Add\+\_\+\+Null\+Pointer\+\_\+\+Fail} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_ad5767a5f56678a4333b0d0fc3b9763b4}\label{test__mpb_digital_filtering_rclp_8c_ad5767a5f56678a4333b0d0fc3b9763b4}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Is\+Filter\+Ready\+\_\+\+Is\+Ready\+False\+\_\+\+Success} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_a287818437748636d74538a655c20583e}\label{test__mpb_digital_filtering_rclp_8c_a287818437748636d74538a655c20583e}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Is\+Filter\+Ready\+\_\+\+Is\+Ready\+True\+\_\+\+Success} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_ac0cd84d4285bb5e5c4539c3214b84481}\label{test__mpb_digital_filtering_rclp_8c_ac0cd84d4285bb5e5c4539c3214b84481}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Is\+Filter\+Ready\+\_\+\+Null\+Pointer\+\_\+\+Fail} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_afdb722a6780ad5b52a09af43946018cd}\label{test__mpb_digital_filtering_rclp_8c_afdb722a6780ad5b52a09af43946018cd}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Float\+Filter\+Init\+\_\+ul\+KNot\+Zero\+\_\+\+Success} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_abc094bb412e867b1dbeb9035fa5e7bd0}\label{test__mpb_digital_filtering_rclp_8c_abc094bb412e867b1dbeb9035fa5e7bd0}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Float\+Filter\+Init\+\_\+ul\+KZero\+\_\+\+Success} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_a9697945a860983f830e373693701b136}\label{test__mpb_digital_filtering_rclp_8c_a9697945a860983f830e373693701b136}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Float\+Filter\+Init\+\_\+\+Null\+Pointer\+\_\+\+Fail} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_a5331bc3b38d4bdaed5bff63a1bb1b0fa}\label{test__mpb_digital_filtering_rclp_8c_a5331bc3b38d4bdaed5bff63a1bb1b0fa}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Float\+Filter\+Init\+\_\+e\+Mpb\+Math\+Division\+U32\+\_\+\+Fail} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_ac2b7185d7897b1bb381d6edfd7a254b0}\label{test__mpb_digital_filtering_rclp_8c_ac2b7185d7897b1bb381d6edfd7a254b0}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Float\+Filter\+Add\+\_\+\+Positive\+\_\+\+Success} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_aeb2441d5fb9852eadf2cf6237fc16098}\label{test__mpb_digital_filtering_rclp_8c_aeb2441d5fb9852eadf2cf6237fc16098}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Float\+Filter\+Add\+\_\+\+Negative\+\_\+\+Success} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_a895bf179313a07aaec2becf86df11ed5}\label{test__mpb_digital_filtering_rclp_8c_a895bf179313a07aaec2becf86df11ed5}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Float\+Filter\+Add\+\_\+\+Bad\+Division\+\_\+\+Fail} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_ab47f4a3831cb0bf6038f84118a630ab5}\label{test__mpb_digital_filtering_rclp_8c_ab47f4a3831cb0bf6038f84118a630ab5}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Float\+Filter\+Add\+\_\+\+Null\+Pointer\+\_\+\+Fail} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_a4643c69be010915151bbe0b6a2634eba}\label{test__mpb_digital_filtering_rclp_8c_a4643c69be010915151bbe0b6a2634eba}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Is\+Float\+Filter\+Ready\+\_\+\+Is\+Ready\+False\+\_\+\+Success} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_af71f427774435c6b76d68ef8c2d34798}\label{test__mpb_digital_filtering_rclp_8c_af71f427774435c6b76d68ef8c2d34798}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Is\+Float\+Filter\+Ready\+\_\+\+Is\+Ready\+True\+\_\+\+Success} ()
+\item 
+\mbox{\Hypertarget{test__mpb_digital_filtering_rclp_8c_abe80e1209291ced7f5f1cc60e3cad7b7}\label{test__mpb_digital_filtering_rclp_8c_abe80e1209291ced7f5f1cc60e3cad7b7}} 
+void {\bfseries test\+\_\+e\+Mpb\+Rclp\+Is\+Float\+Filter\+Ready\+\_\+\+Null\+Pointer\+\_\+\+Fail} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tests for the mpb\+Digital\+Filtering\+Rclp library. 
+
+\begin{DoxyAuthor}{Author}
+juan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 2/22/2022 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+MPB, Montreal, Qc \doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT 2022 MPB, Montreal, Quebec, Canada\end{center} }
+\end{DoxyCopyright}
+\doxysubsubsection*{\begin{center}\copyright{} All rights reserved.\end{center} }
+
+~\newline
+~\newline
+ \begin{center}This document contains confidential and proprietary information of MPB (subject to a non-\/disclosure agreement) and shall\end{center}  \begin{center}not be disclosed, distributed, or reproduced in whole or in part, without the prior written authorization of MPB.\end{center}  
