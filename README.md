@@ -1,1 +1,1 @@
-# mpbComponentSam
+# mpbComponentSam38xe space libraries
